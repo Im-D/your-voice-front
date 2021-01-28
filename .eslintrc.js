@@ -24,7 +24,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'airbnb-typescript',
   ],
-  rules: {},
   overrides: [
     {
       files: ['src/**/*.tsx', 'src/**/*.ts', 'src/**/*.js', 'src/**/*.jsx'],
