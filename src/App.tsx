@@ -1,9 +1,15 @@
-import React, { useState, ReactElement } from 'react';
+import React, { ReactElement } from 'react';
+import { atom, useRecoilState } from 'recoil';
 import logo from './logo.svg';
 import './App.scss';
 
+const textState = atom({
+  key: 'counter',
+  default: 0,
+});
+
 function App(): ReactElement {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useRecoilState(textState);
 
   return (
     <div className="App">
