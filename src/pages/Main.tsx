@@ -3,10 +3,10 @@ import { useRecoilState } from 'recoil';
 import logo from '@assets/logo.svg';
 import './Main.scss';
 import C from '@components';
-import { countState } from '@store/states';
+import { state } from '@store/states';
 
 function Main(): ReactElement {
-  const [count, setCount] = useRecoilState(countState);
+  const [count, setCount] = useRecoilState(state('countState'));
 
   useEffect(() => {
     console.log(count);

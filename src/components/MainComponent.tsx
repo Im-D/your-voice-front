@@ -1,14 +1,13 @@
 import React, { ReactElement } from 'react';
-import { getCountState } from '@store/states';
+import { getState } from '@store/states';
 import { useRecoilValue } from 'recoil';
 
 function MainComponent(): ReactElement {
-  const count = useRecoilValue(getCountState);
+  const count = useRecoilValue(getState('getCountState'));
 
   return (
     <>
       count is:
-      {' '}
       {count}
     </>
   );
