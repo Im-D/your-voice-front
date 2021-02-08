@@ -1,5 +1,11 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
+  globals: {
+    describe: 'readonly',
+    context: 'readonly',
+    it: 'readonly',
+    expect: 'readonly',
+  },
   parserOptions: {
     project: './tsconfig.json',
     ecmaVersion: 5,

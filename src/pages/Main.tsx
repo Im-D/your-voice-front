@@ -1,6 +1,5 @@
 import React, { ReactElement, useEffect } from 'react';
 import { useRecoilState } from 'recoil';
-import logo from '@assets/logo.svg';
 import './Main.scss';
 import C from '@components';
 import { state } from '@store/states';
@@ -15,7 +14,6 @@ function Main(): ReactElement {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
           <button
