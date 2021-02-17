@@ -15,4 +15,11 @@ export default defineConfig({
     '@store': path.resolve(__dirname, './src/store'),
     '@utils': path.resolve(__dirname, './src/utils'),
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/index.scss"`
+      }
+    }
+  }
 });
