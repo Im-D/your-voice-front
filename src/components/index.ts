@@ -1,5 +1,5 @@
 import MainComponent from './MainComponent';
-import Header from './Header/Header';
-import QuestionBox from './QuestionBox/QuestionBox';
+import Header from './Header';
+import QuestionBox from './QuestionBox';
 
-export default { MainComponent, Header, QuestionBox };
+export { MainComponent, Header, QuestionBox };

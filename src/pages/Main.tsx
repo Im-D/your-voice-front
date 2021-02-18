@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import './Main.scss';
-import C from '@components';
+import { MainComponent } from '@components';
 import { state } from '@store/states';
 
 function Main(): ReactElement {
@@ -20,7 +20,7 @@ function Main(): ReactElement {
             onClick={() => setCount((prevCount: number) => prevCount + 1)}
             type="button"
           >
-            <C.MainComponent />
+            <MainComponent />
           </button>
         </p>
         <p>
