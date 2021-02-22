@@ -5,6 +5,6 @@ module.exports = (ctx) => ({
     'postcss-import': {},
     'postcss-nested': {},
     cssnano: ctx.env === 'production' ? {} : false,
-    autoprefixer: { browsers: ['defaults'] },
+    autoprefixer: { overrideBrowserslist: ['defaults'] },
   },
 });
