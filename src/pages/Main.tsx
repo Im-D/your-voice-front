@@ -1,15 +1,15 @@
-import React, { ReactElement, useEffect } from 'react';
-import { useRecoilState } from 'recoil';
+import React, { ReactElement } from 'react';
+// import { useRecoilState } from 'recoil';
 import './Main.scss';
-import { MainComponent } from '@components';
-import { state } from '@store/states';
+// import { MainComponent } from '@components';
+// import { state } from '@store/states';
 
 function Main(): ReactElement {
-  const [count, setCount] = useRecoilState(state('countState'));
+  // const [count, setCount] = useRecoilState(state('countState'));
 
-  useEffect(() => {
-    console.log(count);
-  }, [count]);
+  // useEffect(() => {
+  //   console.log(count);
+  // }, [count]);
 
   return (
     <div className="App">
@@ -17,10 +17,10 @@ function Main(): ReactElement {
         <p>Hello Vite + React!</p>
         <p>
           <button
-            onClick={() => setCount((prevCount: number) => prevCount + 1)}
+            // onClick={() => setCount((prevCount: number) => prevCount + 1)}
             type="button"
           >
-            <MainComponent />
+            {/* <MainComponent /> */}
           </button>
         </p>
         <p>
