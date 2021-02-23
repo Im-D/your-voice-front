@@ -25,6 +25,9 @@ module.exports = {
       },
     },
   },
+  rules: {
+    "@typescript-eslint/no-redeclare": 'off'
+  },
   extends: [
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
