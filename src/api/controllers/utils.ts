@@ -9,30 +9,30 @@ type TRestApiHeaders = {
 
 type TApiData = {
   data: any;
-  message: string | number;
+  message: string;
   isSuccess: boolean;
 };
 
 type TApiSuccess = TApiData;
 type TApiFail = TApiData;
 
-interface IRestApiOptions {
+type TRestApiOptions = {
   method: TRequestMethod;
   headers: TRestApiHeaders;
   params?: string;
 }
 
 export type TApiReturn = TApiSuccess | TApiFail;
-export type TFetchReturnType = Promise<TApiReturn>;
+export type TFetchReturnType = Promise<Pick<TApiReturn, 'data'> | Error>;
 
-const parseResult = (res: TApiReturn): any => {
+const parseResult = (res: TApiReturn): Pick<TApiReturn, 'data'> | Error => {
   if (!res.isSuccess) {
     throw new Error('res.isSuccess is false');
   }
   return res.data;
 };
 
-const makeOptions = (method: TRequestMethod, params: any): IRestApiOptions => ({
+const makeOptions = (method: TRequestMethod, params: any): TRestApiOptions => ({
   method,
   headers: {
     'content-type': 'application/json',
@@ -40,15 +40,13 @@ const makeOptions = (method: TRequestMethod, params: any): IRestApiOptions => ({
   params,
 });
 
-const request = async (url: string, options: IRestApiOptions): TFetchReturnType => {
+const request = async (url: string, options: TRestApiOptions): TFetchReturnType => {
   try {
     const res = await axios({
-      method: options.method,
+      ...options,
       url,
-      params: options.params,
-      headers: options.headers,
     });
-    const data: any = await parseResult(res.data);
+    const data = parseResult(res.data);
     return data;
   } catch (e) {
     console.error('@request api error', e);
