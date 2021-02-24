@@ -3,4 +3,4 @@ const QUESTION_PATH = '/question';
 
 const QUESTION_URL = `${BASE_URL}${QUESTION_PATH}`;
 
-export default { QUESTION_URL };
+export { QUESTION_URL };
