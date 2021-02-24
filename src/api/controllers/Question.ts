@@ -1,5 +1,5 @@
 import { request, makeOptions } from './utils';
-import config from './config';
+import { QUESTION_URL } from './config';
 
 interface IQuestionModel {
   title: string;
@@ -9,7 +9,7 @@ interface IQuestionModel {
 
 const createQuestion = async (questionInfo: IQuestionModel): Promise<any> => {
   try {
-    const url = config.QUESTION_URL;
+    const url = QUESTION_URL;
     const body = {
       ...questionInfo,
     };
