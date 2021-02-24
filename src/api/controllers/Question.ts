@@ -1,13 +1,13 @@
 import { request, makeOptions } from './utils';
 import { QUESTION_URL } from './config';
 
-interface IQuestionModel {
+type TQuestionModel {
   title: string;
   content: string;
   emoji: string;
 }
 
-const createQuestion = async (questionInfo: IQuestionModel): Promise<any> => {
+const createQuestion = async (questionInfo: TQuestionModel): Promise<any> => {
   try {
     const url = QUESTION_URL;
     const body = {
