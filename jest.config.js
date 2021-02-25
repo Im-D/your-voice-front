@@ -19,6 +19,6 @@ module.exports = {
     '^@pages(.*)$':  '<rootDir>/src/pages$1',
     '^@store(.*)$':  '<rootDir>/src/store$1',
     '^@utils(.*)$':  '<rootDir>/src/utils$1',
-
+    '^@api(.*)$':  '<rootDir>/src/api$1',
   }
 };

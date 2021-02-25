@@ -26,7 +26,8 @@ module.exports = {
     },
   },
   rules: {
-    "@typescript-eslint/no-redeclare": 'off'
+    "@typescript-eslint/no-redeclare": 'off',
+    "import/prefer-default-export": 'off',
   },
   extends: [
     'plugin:react/recommended',
