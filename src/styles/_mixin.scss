@@ -1,0 +1,35 @@
+$desktop: "(min-width: 756px)";
+$tablet: "(min-width: 401px) and (max-width: 756px)";
+$mobile: "screen and (max-width: 400px)";
+
+@mixin desktop {
+  @media #{$desktop} {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media #{$tablet} {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media #{$mobile} {
+    @content;
+  }
+}
+
+@mixin flex_col ($justify-content: center, $align-items: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin flex_row ($justify-content: center, $align-items: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
