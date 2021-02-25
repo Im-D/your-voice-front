@@ -1,0 +1,40 @@
+.text {
+  line-height: 1.43;
+  color: $black;
+}
+
+.your-voice-text {
+  &.text1 {
+    @extend .text;
+    font-size: $TEXT_01;
+  }
+
+  &.text2 {
+    @extend .text;
+    font-size: $TEXT_02;
+  }
+
+  &.text3 {
+    @extend .text;
+    font-size: $TEXT_03;
+  }
+
+  &.text4 {
+    @extend .text;
+    font-size: $TEXT_04;
+  }
+
+  &.text5 {
+    @extend .text;
+    font-size: $TEXT_05;
+  }
+
+  &.text6 {
+    @extend .text;
+    font-size: $TEXT_06;
+  }
+
+  &.inline{
+    width: 100%;
+  }
+}
