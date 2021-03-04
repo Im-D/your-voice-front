@@ -28,6 +28,7 @@ module.exports = {
   rules: {
     "@typescript-eslint/no-redeclare": 'off',
     "import/prefer-default-export": 'off',
+    "react/require-default-props": 'off' // https://twitter.com/dan_abramov/status/1133878326358171650
   },
   extends: [
     'plugin:react/recommended',
