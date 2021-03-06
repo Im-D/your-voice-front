@@ -20,7 +20,7 @@ type TRestApiOptions = {
   method: TRequestMethod;
   headers: TRestApiHeaders;
   params?: string;
-}
+};
 
 export type TApiReturn = TApiSuccess | TApiFail;
 export type TFetchReturnType = Promise<Pick<TApiReturn, 'data'> | Error>;

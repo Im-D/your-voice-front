@@ -1,11 +1,11 @@
 import { request, makeOptions } from './utils';
 import { QUESTION_URL } from './config';
 
-type TQuestionModel {
+type TQuestionModel = {
   title: string;
   content: string;
   emoji: string;
-}
+};
 
 const createQuestion = async (questionInfo: TQuestionModel): Promise<any> => {
   try {
