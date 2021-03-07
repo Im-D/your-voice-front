@@ -13,7 +13,7 @@ module.exports = {
       'identity-obj-proxy',
     '^@assets(.*)&': '<rootDir>/src/assets$1',
     "^@components(.*)$": "<rootDir>/src/components$1",
-    '^@atoms(.*)$':  '<rootDir>/src/components/atoms$1',
+    '^@atoms(.*)$':  '<rootDir>/src/atoms$1',
     '^@molecules(.*)$':  '<rootDir>/src/components/molecules$1',
     '^@organisms(.*)$':  '<rootDir>/src/components/organisms$1',
     '^@pages(.*)$':  '<rootDir>/src/pages$1',
