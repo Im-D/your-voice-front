@@ -4,6 +4,8 @@ import './Main.scss';
 // import { MainComponent } from '@components';
 // import { state } from '@store/states';
 
+import { Text } from '@atoms';
+
 function Main(): ReactElement {
   // const [count, setCount] = useRecoilState(state('countState'));
 
@@ -13,6 +15,13 @@ function Main(): ReactElement {
 
   return (
     <div className="App">
+      <Text text="text1" fontType="text1" />
+      <Text text="text2" fontType="text2" />
+      <Text text="text3" fontType="text3" />
+      <Text text="text4" fontType="text4" />
+      <Text text="text5" fontType="text5" />
+      <Text text="text6" fontType="text6" />
+
       <header className="App-header">
         <p>Hello Vite + React!</p>
         <p>
