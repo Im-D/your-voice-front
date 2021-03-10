@@ -1,0 +1,19 @@
+.image {
+  // none
+}
+
+.your-voice-image {
+  &.cover {
+    @extend .image;
+    object-fit: cover;
+  }
+
+  &.contain {
+    @extend .image;
+    object-fit: contain;
+  }
+
+  &.inline {
+    width: 100%;
+  }
+}
