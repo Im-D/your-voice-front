@@ -12,10 +12,10 @@ interface ImageProps {
 }
 
 function Image({
-  className,
+  className = '',
   source,
   alt,
-  style,
+  style = {},
   width = 100,
   height = 100,
 }: ImageProps): ReactElement {
