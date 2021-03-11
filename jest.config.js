@@ -11,14 +11,14 @@ module.exports = {
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
       'identity-obj-proxy',
+    '^@(.*)&': '<rootDir>/src$1',
     '^@assets(.*)&': '<rootDir>/src/assets$1',
-    '^@components(.*)$': '<rootDir>/src/components$1',
-    '^@atoms(.*)$': '<rootDir>/src/atoms$1',
-    '^@molecules(.*)$': '<rootDir>/src/components/molecules$1',
-    '^@organisms(.*)$': '<rootDir>/src/components/organisms$1',
-    '^@pages(.*)$': '<rootDir>/src/pages$1',
-    '^@store(.*)$': '<rootDir>/src/store$1',
-    '^@utils(.*)$': '<rootDir>/src/utils$1',
-    '^@api(.*)$': '<rootDir>/src/api$1',
-  },
+    '^@components(.*)$": "<rootDir>/src/components$1',
+    '^@atoms(.*)$':  '<rootDir>/src/components/atoms$1',
+    '^@pages(.*)$':  '<rootDir>/src/pages$1',
+    '^@store(.*)$':  '<rootDir>/src/store$1',
+    '^@utils(.*)$':  '<rootDir>/src/utils$1',
+    '^@styles(.*)$':  '<rootDir>/src/styles$1',
+    '^@api(.*)$':  '<rootDir>/src/api$1',
+  }
 };
