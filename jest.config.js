@@ -1,5 +1,5 @@
 module.exports = {
-  setupFilesAfterEnv: ['given2/setup', 'jest-plugin-context/setup'],
+  setupFilesAfterEnv: ['given2/setup', 'jest-plugin-context/setup', '@testing-library/jest-dom/extend-expect'],
   coverageThreshold: {
     global: {
       branches: 100,
